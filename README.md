@@ -66,7 +66,7 @@ Alamofire.request(url, parameters: param).responseJSON { (response) in
 
 Moya是作用在Alamofire之上，让我们不再直接去使用Alamofire了，Moya也就可以看做我们的网络管理层，只不过他拥有更好更清晰的网络管理。可以看到下图，我们的APP直接操作Moya，让Moya去管理请求，不在跟Alamofire进行接触。
 
-![](http://og1yl0w9z.bkt.clouddn.com/18-1-8/7073367.jpg)
+![](http://og1yl0w9z.bkt.clouddn.com/18-1-8/30713853.jpg)
 
 网络请求
 
