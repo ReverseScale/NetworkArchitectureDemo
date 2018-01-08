@@ -181,6 +181,7 @@ ObjectMapper框架支持的数据结构类型:
 
 ![](http://og1yl0w9z.bkt.clouddn.com/18-1-8/7284550.jpg)
   
+
 Awesome Cache 是一个让人喜爱的本地磁盘缓存（使用 Swift 编写）。基于 NSCache 发挥最好的性能，而且支持单个对象的缓存期限。
 
 ```Swift
