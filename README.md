@@ -33,8 +33,6 @@ pod 'AwesomeCache', '~> 5.0'
 
 ### 🛠 配置
 
-![](http://og1yl0w9z.bkt.clouddn.com/18-1-8/16127650.jpg)
-
 在Swift中我们发送网络请求一般都是使用一个第三方库 Alamofire ，设置好URL和parameter然后发送网络请求，就像下面这样：
 
 ```Swift
@@ -51,6 +49,8 @@ Alamofire.request(url, parameters: param).responseJSON { (response) in
 ```
 
 这些代码一般都是写在项目的Service或者ViewModel文件中，随着项目的增大每一个Service文件或者ViewModel文件中就会有很多不同的网络请求，每一次网络请求都不免会写这样的代码，那么项目中的网络请求就会变得很乱。
+
+![](http://og1yl0w9z.bkt.clouddn.com/18-1-8/16127650.jpg)
 
 那么这时候一般我们会在项目中添加一个网络请求层，来管理网络请求，一般会叫 APIManager 或者 NetworkModel ，但是这样子还是会有一点不好：
 
