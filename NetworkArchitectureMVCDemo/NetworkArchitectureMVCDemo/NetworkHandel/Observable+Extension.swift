@@ -19,7 +19,7 @@ var openRequestLog = true
 let cache = try! Cache<Caccc>(name: "AwesomeCache")
 
 //MARK: - request & cache
-extension RxMoyaProvider {
+extension MoyaProvider {
     /// json
     open func requestJson(_ token: Target, isCache: Bool = false) -> RxSwift.Observable<Any> {
         return sb_request(token, isCache: isCache)
@@ -41,7 +41,7 @@ extension RxMoyaProvider {
             if  isCache == true,
                 let res = cache[key]{
                 if res.statusCode >= 200 && res.statusCode <= 299 {
-                    let response = Response.init(statusCode: res.statusCode, data: res.data, request: res.request, response: res.response)
+                    let response = Response.init(statusCode: res.statusCode, data: res.data, request: res.request, response: res.response as? HTTPURLResponse)
                     observer.onNext(response)
                 }
             }

@@ -12,7 +12,7 @@ import Moya
 import RxSwift
 
 
-let TestListProvider = RxMoyaProvider<TestListAPI>()
+let TestListProvider = MoyaProvider<TestListAPI>()
 
 public enum TestListAPI {
     case login(dic: NSDictionary)
@@ -21,6 +21,10 @@ public enum TestListAPI {
 
 
 extension TestListAPI: TargetType {
+    public var headers: [String : String]? {
+        return nil
+    }
+    
     
     public var baseURL: URL {
         return URL(string: API_PRO)!
@@ -62,6 +66,6 @@ extension TestListAPI: TargetType {
     }
     
     public var task: Task {
-        return .request
+        return .requestPlain
     }
 }

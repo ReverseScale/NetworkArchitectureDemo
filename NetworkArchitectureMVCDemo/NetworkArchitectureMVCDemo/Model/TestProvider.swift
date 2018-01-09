@@ -12,13 +12,17 @@ import Moya
 import RxSwift
 
 
-let TestProvider = RxMoyaProvider<TestAPI>()
+let TestProvider = MoyaProvider<TestAPI>()
 
 public enum TestAPI {
     case getData(type: String)
 }
 
 extension TestAPI: TargetType {
+    public var headers: [String : String]? {
+        return nil
+    }
+    
     
     public var baseURL: URL {
         return URL(string: "http://app.chatm.com")!
@@ -44,11 +48,9 @@ extension TestAPI: TargetType {
     
     public var parameterEncoding: ParameterEncoding { return URLEncoding.default }
     
-    public var task: Task { return .request }
+    public var task: Task { return .requestPlain }
     
     public var validate: Bool { return false }
     
-    public var sampleData: Data {
-        return "".data(using: String.Encoding.utf8)!
-    }
+    public var sampleData: Data { return "".data(using: String.Encoding.utf8)! }
 }

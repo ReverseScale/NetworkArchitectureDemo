@@ -38,8 +38,8 @@ class ViewController: UIViewController {
     func postLogin() {
         let dic = ["username" : "210", "pwd" : "210"]
         TestListProvider.requestJson(.login(dic: dic as NSDictionary), isCache: false).mapObject(type: TestLoginModel.self).subscribe(onNext: { (callback) in
-//            print("Error:%@",callback.error ?? "")
-        }).addDisposableTo(disposeBag)
+            print("Error:%@",callback.error ?? "")
+        }).disposed(by: disposeBag)
     }
     
     /// 请求视频列表
@@ -52,7 +52,7 @@ class ViewController: UIViewController {
             
             weakSelf?.loadData(dataText: (arrList.videos?.first?.url)!, cache:cache)
 
-        }).addDisposableTo(disposeBag)
+        }).disposed(by: disposeBag)
     }
     
     /// 请求图片
@@ -72,7 +72,7 @@ class ViewController: UIViewController {
                     
                     weakSelf?.loadData(dataText: "\(name)\n\(url)" ,cache:cache)
                 }
-            }).addDisposableTo(disposeBag)
+            }).disposed(by: disposeBag)
         
         // 根解析----TestImageModel
 //            TestProvider.requestJson(.getData(type: "20"), isCache: cache).mapObject(type: TestImageModel.self).subscribe(onNext: { (model) in

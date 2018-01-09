@@ -17,7 +17,7 @@ public extension TargetType {
         let urlStr = baseURL.appendingPathComponent(path).absoluteString
         var sortParams = ""
         
-        if let params = parameters {
+        if let params = headers {
             /// sort
             let sortArr = params.keys.sorted { (str1, str2) -> Bool in
                 return str1 < str2
@@ -31,6 +31,9 @@ public extension TargetType {
                 }
             }
         }
-        return urlStr.appending("?\(sortParams)")
+//        return urlStr.appending("?\(sortParams)")
+        let urlRequestString = urlStr.appending("?\(sortParams)")
+        print("网络请求完整URL：\(urlRequestString)")
+        return urlRequestString
     }
 }
