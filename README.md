@@ -246,7 +246,6 @@ SOFTWARE.
 * WeChat : WhatsXie
 * Email : ReverseScale@iCloud.com
 * Blog : https://reversescale.github.io
-* Code : https://github.com/ReverseScale/NetworkArchitectureDemo
 
 ---
 # 中文说明
@@ -255,10 +254,9 @@ Swift 实现的网络框架示例，包括 MVC 和 MVVM 两种设计模式。�
 
 > 使用 Moya + RxSwift + ObjectMapper + AwesomeCache 进行优雅的网络请求、解析并且缓存。
 
-![](http://og1yl0w9z.bkt.clouddn.com/18-1-8/36541412.jpg)
-
 ![](https://img.shields.io/badge/platform-iOS-red.svg) ![](https://img.shields.io/badge/language-Swift-blue.svg) ![](https://img.shields.io/badge/download-12.9MB-yellow.svg) ![](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg) 
 
+![](http://og1yl0w9z.bkt.clouddn.com/18-1-8/36541412.jpg)
 
 ### 🤖 要求
 
