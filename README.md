@@ -8,7 +8,7 @@ Examples of web frameworks implemented by Swift include both MVC and MVVM design
 
 ![](https://img.shields.io/badge/platform-iOS-red.svg) ![](https://img.shields.io/badge/language-Swift-blue.svg) ![](https://img.shields.io/badge/download-12.9MB-yellow.svg) ![](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg)
 
-[EN]() | [中文](#中文说明)
+[EN](#Requirements) | [中文](#中文说明)
 
 ![](http://og1yl0w9z.bkt.clouddn.com/18-1-8/36541412.jpg)
 
