@@ -10,6 +10,8 @@ Examples of web frameworks implemented by Swift include both MVC and MVVM design
 
 ![](http://og1yl0w9z.bkt.clouddn.com/18-1-8/36541412.jpg)
 
+[EN](#alios-things) | [中文](#alios-things概述)
+
 
 ### 🤖 Requirements
 
@@ -248,7 +250,7 @@ SOFTWARE.
 * Blog : https://reversescale.github.io
 
 ---
-# 中文说明
+## AliOS Things概述
 
 Swift 实现的网络框架示例，包括 MVC 和 MVVM 两种设计模式。🤖
 
