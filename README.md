@@ -204,6 +204,68 @@ do {
 
 ### 📝 Submission
 
+1. For the selection of asynchronous Api?
+The design of requestOperation - NSOperation.
+
+2. Fatal flaws with direct dispatch:
+* The first one is unable to cancel this request (real time control)
+Convenient design cancel request;
+* The second is to occupy a complete thread (resource occupancy)
+No matter how many concurrent requests occur simultaneously, AFNetworking and ASI only have one thread waiting.
+
+3. Consideration of concurrent number of network layer design
+* Control connection number, 2G network can only maintain one link at a time, 3G is 2, 4G and wifi are not limited. This is the limit of the corresponding agreement. If the request exceeds this limit, a timeout will be reported.
+* Bandwidth, download data is traffic, if too many requests concurrently, each connection occupies bandwidth, may lead to each request will be extended
+* maxConcurrentOperationCount can not be too small, to avoid individual requests too slow and later tasks can not start
+
+4. Network layer design data encryption and tamper-proof
+* Free SSL Certificate, https
+* Parameters for signature, dynamic signature key
+* Special attacks:
+<1> https man-in-middle: AFURLConnectionOperationSSLPinningMode in AFNetworking sets ssl nails. (The principle is to pack the certificate or public key into the bundle. When the request is sent, it will be compared with the requested certificate, so the counterfeit certificate issued by the middleman may be avoided.)
+<2>DNS anti-hijacking: You can maintain a routing table locally, and then locally implement NSURLProtocol to perform ip mapping on the host.
+
+5. Network library design callback method
+Requirements: Uniform and Convenient
+* 1. Select block callback, delegate, or target-action compatibility.
+* 2.success and fail separate callback or the same method callback.
+
+6. Interceptors for Network Library Design - AOP
+* 1.session automatically expires after the session
+* 2. Interface to be logged in to log in
+
+7. Cancel processing of network library design
+* Separate cancel
+Who starts, who cancel, dealloc inside to write cancel
+* Unified cancel
+Similar encapsulation methods called inside the parent class
+
+8. The cache of the network library design
+Cache way:
+One is a client-side write cache implementation and cache logic,
+* The two are caches that follow the HTTP protocol.
+
+<1> Self-built cache demand scenario:
+1, the data returned by the interface rarely change, do not want to repeat requests
+2, the network is slow or the server and other abnormal conditions disaster recovery.
+
+be careful:
+* Definition of cache time
+* Real-time data
+* Data loading speed
+* Necessity
+
+<2>HTTP Cache
+NSURLCache, data cache in local sqlite. Add cache-control and Expires to the returned responseHeaders to tell the frontend whether it can cache (set cachePolicy) and cache time.
+
+Principle: Request header plus field - to determine if there is an update, whether to use the cache.
+ETag is a comparison hash, Last-Modified is to compare the last change time.
+
+9. The expansion of network library design
+* SPDY, HTTP/2, or TCP Long Connect - push anytime, anywhere
+* Internationalization - Accept-Language field
+
+Help literature:
 RxSwift chain syntax library
 https://github.com/ReactiveX/RxSwift
 
@@ -213,8 +275,11 @@ https://github.com/Moya/Moya
 ObjectMapper data transfer model library
 https://github.com/Hearst-DD/ObjectMapper
 
-AwesomeCache data cache
+AwesomeCache data cache library
 https://github.com/aschuch/AwesomeCache
+
+IOS application architecture thinking (network layer)
+Https://blog.cnbluebox.com/blog/2015/05/07/architecture-ios-1/
 
 
 ### ⚖ License
@@ -429,11 +494,11 @@ ObjectMapper框架支持的数据结构类型:
 * Dictionary<String, Array<T: Mappable>>
 * Optionals of all the above //上述的可选类型
 * Implicitly Unwrapped Optionals of the above //上述的隐式解析可选类型
-  
+  
 ### Awesome Cache 缓存层
 
 ![](http://og1yl0w9z.bkt.clouddn.com/18-1-8/7284550.jpg)
-  
+  
 
 Awesome Cache 是一个让人喜爱的本地磁盘缓存（使用 Swift 编写）。基于 NSCache 发挥最好的性能，而且支持单个对象的缓存期限。
 
@@ -452,6 +517,68 @@ do {
 
 ### 📝 深入学习
 
+1.对于异步 Api 的选择？
+requestOperation 的设计——NSOperation。
+
+2.使用直接dispatch的致命缺陷：
+* 第一个就是无法cancel这个请求（实时可控）
+方便设计cancel请求；
+* 第二个是占用了完整的一个线程（资源占用）
+无论同时并发多少个请求，AFNetworking和ASI都是只有一个线程在等待的。
+
+3.网络层设计的并发数量的考虑
+* 控制连接数，2G网络下一次只能维持一个链接，3G是2个，4G和wifi是不限。这个是对应协议的限制。如果超过这个限制发出的请求，就会报超时。
+* 带宽，下载数据是要流量的，如果同时并发了太多请求，每个连接都占用带宽，可能导致每个请求的时间均会延长
+* maxConcurrentOperationCount 不能太少，避免个别请求太慢而后面的任务不能启动
+
+4.网络层设计的数据加密和防篡改
+* 免费的SSL证书，https
+* 参数进行签名，动态签名密钥
+* 特殊攻击：
+<1>https中间人：AFNetworking中的AFURLConnectionOperationSSLPinningMode设置ssl钢钉。（原理就是把证书或者公钥 打包到bundle中，发送请求的时候会与请求过来的证书比较，因此避免中间人发放的伪造证书可能。）
+<2>DNS防劫持：可以本地维护一个路由表，然后本地实现 NSURLProtocol 对host进行ip映射。
+
+5.网络库设计的回调方式
+要求：统一和方便
+* 1.是选择block回调方式，还是delegate, 还是target-action 兼容多种。 
+* 2.success和fail分开回调还是同一个方法回调。
+
+6.网络库设计的拦截器——AOP
+* 1.session过期后自动登录
+* 2.需要登录的接口进入登录
+
+7.网络库设计的cancel处理
+* 单独cancel
+谁启动，谁cancel，dealloc里面写cancel
+* 统一cancel
+类似封装个方法在父类里面调用
+
+8.网络库设计的缓存
+缓存的方式：
+* 一种是客户端写缓存实现和缓存逻辑，
+* 二种是遵循HTTP协议的缓存。
+
+<1>自建缓存的需求场景：
+1、接口返回的数据很少变动，不希望做重复请求 
+2、网络慢或者服务器等异常状况容灾。
+
+注意点：
+* 缓存时间的定义
+* 数据实时性
+* 数据加载速度
+* 必要性
+
+<2>HTTP缓存
+NSURLCache，数据缓存在本地sqlite里。在返回的 responseHeaders 中添加 cache-control 和 Expires 来告诉前端是否可以缓存（设置cachePolicy）和缓存时间等。
+
+原理：请求Header加字段-判断是否有更新，是否用缓存。
+ETag是比较hash， Last-Modified是比较最后更改时间。
+
+9.网络库设计的拓展性
+* SPDY、HTTP/2或TCP长连接-随时随地的推活动
+* 国际化-Accept-Language 字段
+
+帮助文献：
 RxSwift 链式语法库
 https://github.com/ReactiveX/RxSwift
 
@@ -463,6 +590,9 @@ https://github.com/Hearst-DD/ObjectMapper
 
 AwesomeCache 数据缓存库
 https://github.com/aschuch/AwesomeCache
+
+IOS应用架构思考一（网络层）
+https://blog.cnbluebox.com/blog/2015/05/07/architecture-ios-1/
 
 
 ### ⚖ 协议
