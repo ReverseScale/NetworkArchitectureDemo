@@ -246,7 +246,9 @@ One is a client-side write cache implementation and cache logic,
 * The two are caches that follow the HTTP protocol.
 
 <1> Self-built cache demand scenario:
+
 1, the data returned by the interface rarely change, do not want to repeat requests
+
 2, the network is slow or the server and other abnormal conditions disaster recovery.
 
 be careful:
@@ -559,7 +561,9 @@ requestOperation 的设计——NSOperation。
 * 二种是遵循HTTP协议的缓存。
 
 <1>自建缓存的需求场景：
+
 1、接口返回的数据很少变动，不希望做重复请求 
+
 2、网络慢或者服务器等异常状况容灾。
 
 注意点：
