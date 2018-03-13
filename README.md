@@ -227,12 +227,12 @@ No matter how many concurrent requests occur simultaneously, AFNetworking and AS
 
 5. Network library design callback method
 Requirements: Uniform and Convenient
-* 1. Select block callback, delegate, or target-action compatibility.
-* 2.success and fail separate callback or the same method callback.
+* Select block callback, delegate, or target-action compatibility.
+* success and fail separate callback or the same method callback.
 
 6. Interceptors for Network Library Design - AOP
-* 1.session automatically expires after the session
-* 2. Interface to be logged in to log in
+* session automatically expires after the session
+* Interface to be logged in to log in
 
 7. Cancel processing of network library design
 * Separate cancel
