@@ -42,9 +42,9 @@ extension TestListAPI: TargetType {
     public var method: Moya.Method {
         switch self {
         case .login(dic: _):
-            return .get
-        case .video:
             return .post
+        case .video:
+            return .get
         }
     }
     

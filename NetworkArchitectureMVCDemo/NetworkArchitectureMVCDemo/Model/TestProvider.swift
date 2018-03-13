@@ -23,7 +23,6 @@ extension TestAPI: TargetType {
         return nil
     }
     
-    
     public var baseURL: URL {
         return URL(string: "http://app.chatm.com")!
     }

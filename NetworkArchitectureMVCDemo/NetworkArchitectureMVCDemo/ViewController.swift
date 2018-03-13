@@ -24,88 +24,95 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        requestImage(cache: getCacheBool())
+        requestVideoList(cache: getCacheBool())
         
-        requestImage(cache: false)
-        
-        
-        requestVideoList(cache: false)
-        
-        // 登录验证
         postLogin()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        cacheSwitch.isOn = getCacheBool()
+        loadImage(url: "",cache:getCacheBool())
+    }
+    
+    func getCacheBool() -> Bool {
+        let userDefault = UserDefaults.standard
+        let boolValue = userDefault.bool(forKey: "isCache")
+        return boolValue
     }
     
     /// 登录验证
     func postLogin() {
-        let dic = ["username" : "210", "pwd" : "210"]
-        TestListProvider.requestJson(.login(dic: dic as NSDictionary), isCache: false).mapObject(type: TestLoginModel.self).subscribe(onNext: { (callback) in
-            print("Error:%@",callback.error ?? "")
-        }).disposed(by: disposeBag)
+        let dic = ["username":"210", "pwd":"210"]
+        TestListProvider
+            .requestJson(.login(dic: dic as NSDictionary), isCache: false)
+            .mapObject(type: TestLoginModel.self)
+            .subscribe(onNext: { (callback) in
+                print("Error:\(callback.error ?? "")")
+            })
+            .disposed(by: disposeBag)
     }
     
     /// 请求视频列表
-    func requestVideoList(cache: Bool)  {
+    func requestVideoList(cache: Bool) {
         weak var weakSelf = self
-        TestListProvider.requestJson(.video, isCache: cache).mapObject(type: TestListModel.self).subscribe(onNext: { (arrList) in
-            _ = arrList.videos?.map {
-                print($0.url ?? "")
-            }
-            
-            weakSelf?.loadData(dataText: (arrList.videos?.first?.url)!, cache:cache)
-
-        }).disposed(by: disposeBag)
+        TestListProvider
+            .requestJson(.video, isCache: cache)
+            .mapObject(type: TestListModel.self)
+            .subscribe(onNext: { (arrList) in
+                _ = arrList.videos?.map {
+                    print("Video List:\($0.url ?? "")")
+                }
+                weakSelf?.loadData(dataText: (arrList.videos?.first?.url)!, cache:cache)
+            })
+            .disposed(by: disposeBag)
     }
     
     /// 请求图片
     func requestImage(cache: Bool) {
         weak var weakSelf = self
-
-        // 多一层解析----TestModel
-        TestProvider.requestJson(.getData(type: "20"), isCache: cache)
-            .mapArray(type: TestModel.self)
-            .subscribe( onNext: { (modelArr) in
-                print(modelArr)
-                if modelArr.count != 0 {
-                    let model = modelArr.first
+        TestProvider
+            .requestJson(.getData(type: "20"),isCache: cache)
+            .mapObject(type: TestImageModel.self)
+            .subscribe(onNext:{(model) in
+                print("Image Model:\(model)")
+                
+                let arr = model.data
+                if arr?.count != 0 {
+                    let model = arr?.first
                     let url = model?.url ?? ""
                     let name = model?.name ?? ""
-                    weakSelf?.webImageView.kf.setImage(with: URL(string: url))
-                    
-                    weakSelf?.loadData(dataText: "\(name)\n\(url)" ,cache:cache)
+                    weakSelf?.loadImage(url: "\(name)\n\(url)" ,cache:cache)
                 }
-            }).disposed(by: disposeBag)
-        
-        // 根解析----TestImageModel
-//            TestProvider.requestJson(.getData(type: "20"), isCache: cache).mapObject(type: TestImageModel.self).subscribe(onNext: { (model) in
-//                
-//                print("----%@",model)
-//                let arr = model.data
-//
-//                if arr?.count != 0 {
-//                let model = arr?.first
-//                let url = model?.url ?? ""
-//                let name = model?.name ?? ""
-//                weakSelf?.webImageView.kf.setImage(with: URL(string: url))
-//
-//                weakSelf?.loadData(dataText: "\(name)\n\(url)" ,cache:cache)
-//            }
-//            
-//        }).addDisposableTo(disposeBag)
+            })
+            .disposed(by: disposeBag)
     }
     
     @IBAction func switchClick(_ sender: UISwitch) {
-        requestImage(cache: sender.isOn)
+        let isCache = sender.isOn
+        if isCache {
+            requestImage(cache: isCache)
+            requestVideoList(cache: isCache)
+        }
+        
+        let userDefault = UserDefaults.standard
+        userDefault.set(isCache, forKey: "isCache")
     }
     
-    /// View 数据填充
+    /// 加载数据
     func loadData(dataText:String, cache:Bool) {
-        self.dataTextView.text = dataText
-        self.cacheTextView.text = cache ? dataText : ""
+        dataTextView.text = dataText
+        print(cache)
+        cacheTextView.text = cache ? dataText : ""
+    }
+    /// 加载图片数据
+    func loadImage(url:String, cache:Bool) {
+        webImageView.kf.setImage(with: URL(string: url),placeholder:UIImage(named:"icon_placeholder"))
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
