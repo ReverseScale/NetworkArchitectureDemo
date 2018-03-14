@@ -268,7 +268,8 @@ ETag is a comparison hash, Last-Modified is to compare the last change time.
 * SPDY, HTTP/2, or TCP Long Connect - push anytime, anywhere
 * Internationalization - Accept-Language field
 
-Help literature:
+#### Help literature:
+
 RxSwift chain syntax library
 https://github.com/ReactiveX/RxSwift
 
@@ -332,8 +333,8 @@ Swift 实现的网络框架示例，包括 MVC 和 MVVM 两种设计模式。�
 
 * iOS 8.0+
 * Xcode 9.0+
-* Swift 3.2
-（MVC 缓存版已升级适配 Swift 4.0）
+* Swift 4.0
+（MVVM 使用 Swift 3.2）
 
 ### 🎯 安装方法
 
@@ -502,7 +503,6 @@ ObjectMapper框架支持的数据结构类型:
 
 ![](http://og1yl0w9z.bkt.clouddn.com/18-1-8/7284550.jpg)
   
-
 Awesome Cache 是一个让人喜爱的本地磁盘缓存（使用 Swift 编写）。基于 NSCache 发挥最好的性能，而且支持单个对象的缓存期限。
 
 ```Swift
@@ -585,7 +585,8 @@ ETag是比较hash， Last-Modified是比较最后更改时间。
 * SPDY、HTTP/2或TCP长连接-随时随地的推活动
 * 国际化-Accept-Language 字段
 
-帮助文献：
+#### 帮助文献：
+
 RxSwift 链式语法库
 https://github.com/ReactiveX/RxSwift
 
