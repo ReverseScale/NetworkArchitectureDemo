@@ -13,7 +13,6 @@ import Moya
 /// key
 public extension TargetType {
     var cacheKey: String {
-        
         let urlStr = baseURL.appendingPathComponent(path).absoluteString
         var sortParams = ""
         
@@ -31,9 +30,8 @@ public extension TargetType {
                 }
             }
         }
-//        return urlStr.appending("?\(sortParams)")
         let urlRequestString = urlStr.appending("?\(sortParams)")
-        print("网络请求完整URL：\(urlRequestString)")
+        print("Network request full URL:\(urlRequestString)")
         return urlRequestString
     }
 }

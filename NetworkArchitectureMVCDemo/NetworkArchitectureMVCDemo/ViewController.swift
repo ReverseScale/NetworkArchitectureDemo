@@ -18,28 +18,24 @@ class ViewController: UIViewController {
     @IBOutlet weak var dataTextView: UITextView!
     @IBOutlet weak var cacheTextView: UITextView!
     
+    var isCacheBool = UserDefaults.standard.bool(forKey: "isCache")
+    
     let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        requestImage(cache: getCacheBool())
-        requestVideoList(cache: getCacheBool())
+        requestImage(cache: isCacheBool)
+        requestVideoList(cache: isCacheBool)
         
         postLogin()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        cacheSwitch.isOn = getCacheBool()
-        loadImage(url: "",cache:getCacheBool())
-    }
-    
-    func getCacheBool() -> Bool {
-        let userDefault = UserDefaults.standard
-        let boolValue = userDefault.bool(forKey: "isCache")
-        return boolValue
+        cacheSwitch.isOn = isCacheBool
+        loadImage(url: "",cache:isCacheBool)
     }
     
     /// 登录验证
@@ -95,15 +91,12 @@ class ViewController: UIViewController {
             requestImage(cache: isCache)
             requestVideoList(cache: isCache)
         }
-        
-        let userDefault = UserDefaults.standard
-        userDefault.set(isCache, forKey: "isCache")
+        UserDefaults.standard.set(isCache, forKey: "isCache")
     }
     
     /// 加载数据
     func loadData(dataText:String, cache:Bool) {
         dataTextView.text = dataText
-        print(cache)
         cacheTextView.text = cache ? dataText : ""
     }
     /// 加载图片数据
