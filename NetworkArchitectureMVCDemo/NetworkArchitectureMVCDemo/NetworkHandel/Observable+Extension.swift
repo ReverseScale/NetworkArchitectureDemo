@@ -24,6 +24,7 @@ extension MoyaProvider {
     open func requestJson(_ token: Target, isCache: Bool = false) -> RxSwift.Observable<Any> {
         return sb_request(token, isCache: isCache)
             .filterSuccessfulStatusCodes()
+            .showAPIErrorToast()
             .mapJSON()
     }
     

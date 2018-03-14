@@ -10,6 +10,7 @@
 		07EBF69188E3A44C444E1398 /* Pods_NetworkArchitectureMVCDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 800656717569534A169FF2CC /* Pods_NetworkArchitectureMVCDemo.framework */; };
 		1902F9E463765F01C3643C56 /* Pods_NetworkArchitectureMVCDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B664C3E67356C1E5AA5EB19 /* Pods_NetworkArchitectureMVCDemoTests.framework */; };
 		297668E4D24F46CF78C9D3B9 /* Pods_NetworkArchitectureMVCDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85CDE886C296EDC05BF9F9A0 /* Pods_NetworkArchitectureMVCDemoUITests.framework */; };
+		3448996A2058BE7F00E7622B /* Observable+Callback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344899692058BE7E00E7622B /* Observable+Callback.swift */; };
 		34C043A81F66327F00873AA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C043A71F66327F00873AA5 /* AppDelegate.swift */; };
 		34C043AA1F66327F00873AA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C043A91F66327F00873AA5 /* ViewController.swift */; };
 		34C043AD1F66327F00873AA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34C043AB1F66327F00873AA5 /* Main.storyboard */; };
@@ -50,6 +51,7 @@
 /* Begin PBXFileReference section */
 		017C54DD5625F90E6E27E34C /* Pods-NetworkArchitectureMVCDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkArchitectureMVCDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkArchitectureMVCDemo/Pods-NetworkArchitectureMVCDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		0B664C3E67356C1E5AA5EB19 /* Pods_NetworkArchitectureMVCDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetworkArchitectureMVCDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		344899692058BE7E00E7622B /* Observable+Callback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+Callback.swift"; sourceTree = "<group>"; };
 		34C043A41F66327F00873AA5 /* NetworkArchitectureMVCDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkArchitectureMVCDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34C043A71F66327F00873AA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34C043A91F66327F00873AA5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -172,10 +174,10 @@
 			children = (
 				34C044511F676F0600873AA5 /* AutoModel */,
 				34C043D71F66383300873AA5 /* TestModel.swift */,
-				34C043EC1F66716600873AA5 /* TestImageModel.swift */,
 				34C043D91F6638F500873AA5 /* TestProvider.swift */,
-				34C043E81F66653200873AA5 /* TestLoginModel.swift */,
+				34C043EC1F66716600873AA5 /* TestImageModel.swift */,
 				34C043E61F665B8B00873AA5 /* TestListProvider.swift */,
+				34C043E81F66653200873AA5 /* TestLoginModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -184,8 +186,9 @@
 			isa = PBXGroup;
 			children = (
 				34C043DB1F663A0E00873AA5 /* Observable+Extension.swift */,
-				34C043DF1F663ADC00873AA5 /* TargetType+Extension.swift */,
+				344899692058BE7E00E7622B /* Observable+Callback.swift */,
 				34C043DD1F663A7200873AA5 /* Response+NSCoding.swift */,
+				34C043DF1F663ADC00873AA5 /* TargetType+Extension.swift */,
 			);
 			path = NetworkHandel;
 			sourceTree = "<group>";
@@ -547,6 +550,7 @@
 				34C043A81F66327F00873AA5 /* AppDelegate.swift in Sources */,
 				34C044591F6770FE00873AA5 /* Video.swift in Sources */,
 				34C043E31F665B5800873AA5 /* API.swift in Sources */,
+				3448996A2058BE7F00E7622B /* Observable+Callback.swift in Sources */,
 				34C043DE1F663A7200873AA5 /* Response+NSCoding.swift in Sources */,
 				34C044581F6770FE00873AA5 /* TestListModel.swift in Sources */,
 			);

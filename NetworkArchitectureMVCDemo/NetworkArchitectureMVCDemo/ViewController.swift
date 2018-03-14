@@ -52,26 +52,30 @@ class ViewController: UIViewController {
     
     /// 请求视频列表
     func requestVideoList(cache: Bool) {
-        weak var weakSelf = self
         TestListProvider
             .requestJson(.video, isCache: cache)
             .mapObject(type: TestListModel.self)
-            .subscribe(onNext: { (arrList) in
+            .subscribe(onNext: {[weak self](arrList) in
                 _ = arrList.videos?.map {
                     print("Video List:\($0.url ?? "")")
                 }
-                weakSelf?.loadData(dataText: (arrList.videos?.first?.url)!, cache:cache)
-            })
+                self?.loadData(dataText: (arrList.videos?.first?.url)!, cache:cache)
+            }, onError: { (error) in
+                print("Network Request - Error Callback (Process Result):\(error.localizedDescription)")
+            }, onCompleted: {
+                print("Network Request - Signed Callback (Optional)")
+            }){
+                print("Network Request - Processing Callback (Optional)")
+            }
             .disposed(by: disposeBag)
     }
     
     /// 请求图片
     func requestImage(cache: Bool) {
-        weak var weakSelf = self
         TestProvider
             .requestJson(.getData(type: "20"),isCache: cache)
             .mapObject(type: TestImageModel.self)
-            .subscribe(onNext:{(model) in
+            .subscribe(onNext:{[weak self](model) in
                 print("Image Model:\(model)")
                 
                 let arr = model.data
@@ -79,7 +83,7 @@ class ViewController: UIViewController {
                     let model = arr?.first
                     let url = model?.url ?? ""
                     let name = model?.name ?? ""
-                    weakSelf?.loadImage(url: "\(name)\n\(url)" ,cache:cache)
+                    self?.loadImage(url: "\(name)\n\(url)" ,cache:cache)
                 }
             })
             .disposed(by: disposeBag)
