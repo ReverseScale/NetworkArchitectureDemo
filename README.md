@@ -15,8 +15,8 @@ Examples of web frameworks implemented by Swift include both MVC and MVVM design
 
 * iOS 8.0+
 * Xcode 9.0+
-* Swift 3.2
-（MVC Cache Edition has been updated to fit Swift 4.0）
+* Swift 4.0
+（MVVM uses Swift 3.2）
 
 ### 🎯 Installation
 
@@ -220,7 +220,9 @@ No matter how many concurrent requests occur simultaneously, AFNetworking and AS
 * Free SSL Certificate, https
 * Parameters for signature, dynamic signature key
 * Special attacks:
+
 <1> https man-in-middle: AFURLConnectionOperationSSLPinningMode in AFNetworking sets ssl nails. (The principle is to pack the certificate or public key into the bundle. When the request is sent, it will be compared with the requested certificate, so the counterfeit certificate issued by the middleman may be avoided.)
+
 <2>DNS anti-hijacking: You can maintain a routing table locally, and then locally implement NSURLProtocol to perform ip mapping on the host.
 
 5. Network library design callback method
@@ -256,6 +258,7 @@ be careful:
 * Necessity
 
 <2>HTTP Cache
+
 NSURLCache, data cache in local sqlite. Add cache-control and Expires to the returned responseHeaders to tell the frontend whether it can cache (set cachePolicy) and cache time.
 
 Principle: Request header plus field - to determine if there is an update, whether to use the cache.
@@ -535,7 +538,9 @@ requestOperation 的设计——NSOperation。
 * 免费的SSL证书，https
 * 参数进行签名，动态签名密钥
 * 特殊攻击：
+
 <1>https中间人：AFNetworking中的AFURLConnectionOperationSSLPinningMode设置ssl钢钉。（原理就是把证书或者公钥 打包到bundle中，发送请求的时候会与请求过来的证书比较，因此避免中间人发放的伪造证书可能。）
+
 <2>DNS防劫持：可以本地维护一个路由表，然后本地实现 NSURLProtocol 对host进行ip映射。
 
 5.网络库设计的回调方式
