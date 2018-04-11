@@ -15,7 +15,6 @@
 		34C043AA1F66327F00873AA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C043A91F66327F00873AA5 /* ViewController.swift */; };
 		34C043AD1F66327F00873AA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34C043AB1F66327F00873AA5 /* Main.storyboard */; };
 		34C043AF1F66327F00873AA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34C043AE1F66327F00873AA5 /* Assets.xcassets */; };
-		34C043B21F66327F00873AA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34C043B01F66327F00873AA5 /* LaunchScreen.storyboard */; };
 		34C043BD1F66327F00873AA5 /* NetworkArchitectureMVCDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C043BC1F66327F00873AA5 /* NetworkArchitectureMVCDemoTests.swift */; };
 		34C043C81F66327F00873AA5 /* NetworkArchitectureMVCDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C043C71F66327F00873AA5 /* NetworkArchitectureMVCDemoUITests.swift */; };
 		34C043D81F66383300873AA5 /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C043D71F66383300873AA5 /* TestModel.swift */; };
@@ -29,6 +28,8 @@
 		34C043ED1F66716700873AA5 /* TestImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C043EC1F66716600873AA5 /* TestImageModel.swift */; };
 		34C044581F6770FE00873AA5 /* TestListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C044561F6770FE00873AA5 /* TestListModel.swift */; };
 		34C044591F6770FE00873AA5 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C044571F6770FE00873AA5 /* Video.swift */; };
+		34D61A41207E0A2900A3E906 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34D61A3F207E0A2800A3E906 /* LaunchScreen.storyboard */; };
+		34D61A42207E0A2900A3E906 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 34D61A40207E0A2900A3E906 /* Default.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +58,6 @@
 		34C043A91F66327F00873AA5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		34C043AC1F66327F00873AA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		34C043AE1F66327F00873AA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		34C043B11F66327F00873AA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		34C043B31F66327F00873AA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34C043B81F66327F00873AA5 /* NetworkArchitectureMVCDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkArchitectureMVCDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34C043BC1F66327F00873AA5 /* NetworkArchitectureMVCDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkArchitectureMVCDemoTests.swift; sourceTree = "<group>"; };
@@ -76,6 +76,8 @@
 		34C043EC1F66716600873AA5 /* TestImageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestImageModel.swift; sourceTree = "<group>"; };
 		34C044561F6770FE00873AA5 /* TestListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestListModel.swift; sourceTree = "<group>"; };
 		34C044571F6770FE00873AA5 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		34D61A3F207E0A2800A3E906 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		34D61A40207E0A2900A3E906 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		5AF973507F68C879B54E5DAF /* Pods-NetworkArchitectureMVCDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkArchitectureMVCDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkArchitectureMVCDemoUITests/Pods-NetworkArchitectureMVCDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		800656717569534A169FF2CC /* Pods_NetworkArchitectureMVCDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetworkArchitectureMVCDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82A3513DDB0B4B89E86468BF /* Pods-NetworkArchitectureMVCDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkArchitectureMVCDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkArchitectureMVCDemoUITests/Pods-NetworkArchitectureMVCDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -145,7 +147,8 @@
 				34C043D51F66381000873AA5 /* Model */,
 				34C043AB1F66327F00873AA5 /* Main.storyboard */,
 				34C043AE1F66327F00873AA5 /* Assets.xcassets */,
-				34C043B01F66327F00873AA5 /* LaunchScreen.storyboard */,
+				34D61A40207E0A2900A3E906 /* Default.png */,
+				34D61A3F207E0A2800A3E906 /* LaunchScreen.storyboard */,
 				34C043B31F66327F00873AA5 /* Info.plist */,
 			);
 			path = NetworkArchitectureMVCDemo;
@@ -350,9 +353,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34C043B21F66327F00873AA5 /* LaunchScreen.storyboard in Resources */,
+				34D61A41207E0A2900A3E906 /* LaunchScreen.storyboard in Resources */,
 				34C043AF1F66327F00873AA5 /* Assets.xcassets in Resources */,
 				34C043AD1F66327F00873AA5 /* Main.storyboard in Resources */,
+				34D61A42207E0A2900A3E906 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,14 +600,6 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		34C043B01F66327F00873AA5 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				34C043B11F66327F00873AA5 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -705,7 +701,6 @@
 			baseConfigurationReference = 017C54DD5625F90E6E27E34C /* Pods-NetworkArchitectureMVCDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 7QT42R489Z;
 				INFOPLIST_FILE = NetworkArchitectureMVCDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -720,7 +715,6 @@
 			baseConfigurationReference = 860795AC830CC7560A962F60 /* Pods-NetworkArchitectureMVCDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 7QT42R489Z;
 				INFOPLIST_FILE = NetworkArchitectureMVCDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

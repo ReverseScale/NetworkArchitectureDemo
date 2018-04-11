@@ -12,7 +12,6 @@
 		3499C96B1F62676800D5A23F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3499C96A1F62676800D5A23F /* ViewController.swift */; };
 		3499C96E1F62676900D5A23F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3499C96C1F62676900D5A23F /* Main.storyboard */; };
 		3499C9701F62676900D5A23F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3499C96F1F62676900D5A23F /* Assets.xcassets */; };
-		3499C9731F62676900D5A23F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3499C9711F62676900D5A23F /* LaunchScreen.storyboard */; };
 		3499C97E1F62676A00D5A23F /* NetworkArchitectureDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3499C97D1F62676A00D5A23F /* NetworkArchitectureDemoTests.swift */; };
 		3499C9891F62676A00D5A23F /* NetworkArchitectureDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3499C9881F62676A00D5A23F /* NetworkArchitectureDemoUITests.swift */; };
 		3499C9981F626E3300D5A23F /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3499C9971F626E3300D5A23F /* API.swift */; };
@@ -22,6 +21,8 @@
 		3499C9A51F62715000D5A23F /* Observable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3499C9A41F62715000D5A23F /* Observable+Extension.swift */; };
 		3499C9A71F62716D00D5A23F /* Observable+ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3499C9A61F62716D00D5A23F /* Observable+ObjectMapper.swift */; };
 		3499C9AB1F62801300D5A23F /* TestAppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3499C9AA1F62801300D5A23F /* TestAppService.swift */; };
+		34D61A45207E0F5900A3E906 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34D61A43207E0F5800A3E906 /* LaunchScreen.storyboard */; };
+		34D61A46207E0F5900A3E906 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 34D61A44207E0F5800A3E906 /* Default.png */; };
 		A218178DAC1D6DEAF978ABBB /* Pods_NetworkArchitectureDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F6AFCB1D08A3C3201A90E7 /* Pods_NetworkArchitectureDemo.framework */; };
 		EB565BD899E879896AC3095B /* Pods_NetworkArchitectureDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F191286A276DEFC69A60889B /* Pods_NetworkArchitectureDemoTests.framework */; };
 /* End PBXBuildFile section */
@@ -50,7 +51,6 @@
 		3499C96A1F62676800D5A23F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3499C96D1F62676900D5A23F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3499C96F1F62676900D5A23F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3499C9721F62676900D5A23F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3499C9741F62676900D5A23F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3499C9791F62676A00D5A23F /* NetworkArchitectureDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkArchitectureDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3499C97D1F62676A00D5A23F /* NetworkArchitectureDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkArchitectureDemoTests.swift; sourceTree = "<group>"; };
@@ -65,6 +65,8 @@
 		3499C9A41F62715000D5A23F /* Observable+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+Extension.swift"; sourceTree = "<group>"; };
 		3499C9A61F62716D00D5A23F /* Observable+ObjectMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+ObjectMapper.swift"; sourceTree = "<group>"; };
 		3499C9AA1F62801300D5A23F /* TestAppService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestAppService.swift; sourceTree = "<group>"; };
+		34D61A43207E0F5800A3E906 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		34D61A44207E0F5800A3E906 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		47BFAD9098FA38C6395D1E8B /* Pods-NetworkArchitectureDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkArchitectureDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkArchitectureDemo/Pods-NetworkArchitectureDemo.release.xcconfig"; sourceTree = "<group>"; };
 		9D106DE00AC9E706C1236BEA /* Pods-NetworkArchitectureDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkArchitectureDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkArchitectureDemo/Pods-NetworkArchitectureDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		AA0FDE2E8B6863753EE3DD24 /* Pods-NetworkArchitectureDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkArchitectureDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkArchitectureDemoUITests/Pods-NetworkArchitectureDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -136,7 +138,8 @@
 				3499C99C1F626F1F00D5A23F /* ViewModel */,
 				3499C96C1F62676900D5A23F /* Main.storyboard */,
 				3499C96F1F62676900D5A23F /* Assets.xcassets */,
-				3499C9711F62676900D5A23F /* LaunchScreen.storyboard */,
+				34D61A44207E0F5800A3E906 /* Default.png */,
+				34D61A43207E0F5800A3E906 /* LaunchScreen.storyboard */,
 				3499C9741F62676900D5A23F /* Info.plist */,
 			);
 			path = NetworkArchitectureDemo;
@@ -335,9 +338,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3499C9731F62676900D5A23F /* LaunchScreen.storyboard in Resources */,
+				34D61A45207E0F5900A3E906 /* LaunchScreen.storyboard in Resources */,
 				3499C9701F62676900D5A23F /* Assets.xcassets in Resources */,
 				3499C96E1F62676900D5A23F /* Main.storyboard in Resources */,
+				34D61A46207E0F5900A3E906 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,13 +368,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NetworkArchitectureDemo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		48F2F0474F62245F1285B9F2 /* [CP] Copy Pods Resources */ = {
@@ -424,13 +431,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NetworkArchitectureDemoTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B4A44EA4438F24213BEAA3DC /* [CP] Embed Pods Frameworks */ = {
@@ -454,13 +464,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NetworkArchitectureDemoUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E49A8644252A9531D8EC0254 /* [CP] Embed Pods Frameworks */ = {
@@ -469,9 +482,20 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-NetworkArchitectureDemo/Pods-NetworkArchitectureDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -550,14 +574,6 @@
 				3499C96D1F62676900D5A23F /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		3499C9711F62676900D5A23F /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3499C9721F62676900D5A23F /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -661,7 +677,6 @@
 			baseConfigurationReference = 9D106DE00AC9E706C1236BEA /* Pods-NetworkArchitectureDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 7QT42R489Z;
 				INFOPLIST_FILE = NetworkArchitectureDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -676,7 +691,6 @@
 			baseConfigurationReference = 47BFAD9098FA38C6395D1E8B /* Pods-NetworkArchitectureDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 7QT42R489Z;
 				INFOPLIST_FILE = NetworkArchitectureDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

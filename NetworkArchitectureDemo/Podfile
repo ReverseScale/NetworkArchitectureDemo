@@ -5,10 +5,10 @@ target 'NetworkArchitectureDemo' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
-    pod 'RxSwift'
-    pod 'RxCocoa'
-    pod 'Moya/RxSwift'
-    pod 'ObjectMapper'
+    pod 'RxSwift', '~> 3.4.0'
+    pod 'Moya', '~> 8.0.3'
+    pod 'Moya/RxSwift', '~> 8.0.3'
+    pod 'ObjectMapper', '~> 2.2.5'
 
   # Pods for NetworkArchitectureDemo
 
