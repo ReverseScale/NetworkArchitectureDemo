@@ -1,0 +1,6 @@
+framework module Pods_NetworkArchitectureMVCDemo {
+  umbrella header "Pods-NetworkArchitectureMVCDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}
