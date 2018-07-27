@@ -1,28 +1,30 @@
 //
-//	TestListModel.swift
+//	BTCBpi.swift
 //
-//	Create by Steven Xie on 12/9/2017
-//	Copyright © 2017. All rights reserved.
+//	Create by Steven Xie on 27/7/2018
+//	Copyright © 2018. All rights reserved.
 //	Model file generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport
 
 import Foundation 
 import ObjectMapper
 
 
-class TestListModel : NSObject, NSCoding, Mappable{
+class BTCBpi : NSObject, NSCoding, Mappable{
 
-	var videos : [Video]?
+	var cNY : BTCCNY?
+	var uSD : BTCCNY?
 
 
 	class func newInstance(map: Map) -> Mappable?{
-		return TestListModel()
+		return BTCBpi()
 	}
 	required init?(map: Map){}
 	private override init(){}
 
 	func mapping(map: Map)
 	{
-		videos <- map["videos"]
+		cNY <- map["CNY"]
+		uSD <- map["USD"]
 		
 	}
 
@@ -32,7 +34,8 @@ class TestListModel : NSObject, NSCoding, Mappable{
     */
     @objc required init(coder aDecoder: NSCoder)
 	{
-         videos = aDecoder.decodeObject(forKey: "videos") as? [Video]
+         cNY = aDecoder.decodeObject(forKey: "CNY") as? BTCCNY
+         uSD = aDecoder.decodeObject(forKey: "USD") as? BTCCNY
 
 	}
 
@@ -42,8 +45,11 @@ class TestListModel : NSObject, NSCoding, Mappable{
     */
     @objc func encode(with aCoder: NSCoder)
 	{
-		if videos != nil{
-			aCoder.encode(videos, forKey: "videos")
+		if cNY != nil{
+			aCoder.encode(cNY, forKey: "CNY")
+		}
+		if uSD != nil{
+			aCoder.encode(uSD, forKey: "USD")
 		}
 
 	}

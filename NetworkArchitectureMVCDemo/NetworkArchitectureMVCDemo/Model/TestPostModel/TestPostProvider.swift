@@ -12,11 +12,10 @@ import Moya
 import RxSwift
 
 
-let TestListProvider = MoyaProvider<TestListAPI>()
+let TestPostProvider = MoyaProvider<TestListAPI>()
 
 public enum TestListAPI {
     case login(dic: NSDictionary)
-    case video
 }
 
 
@@ -34,8 +33,6 @@ extension TestListAPI: TargetType {
         switch self {
         case .login(dic: _):
             return "/login"
-        case .video:
-            return "/video"
         }
     }
     
@@ -43,8 +40,6 @@ extension TestListAPI: TargetType {
         switch self {
         case .login(dic: _):
             return .post
-        case .video:
-            return .get
         }
     }
     
@@ -52,8 +47,6 @@ extension TestListAPI: TargetType {
         switch self {
         case .login(dic: let dic):
             return dic as? [String : Any]
-        case .video:
-            return ["type": "JSON"]
         }
     }
     

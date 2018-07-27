@@ -1,9 +1,9 @@
 //
-//  TestProvider.swift
+//  BTCProvider.swift
 //  NetworkArchitectureMVCDemo
 //
-//  Created by WhatsXie on 2017/9/11.
-//  Copyright © 2017年 StevenXie. All rights reserved.
+//  Created by Steven Xie on 2018/7/27.
+//  Copyright © 2018年 StevenXie. All rights reserved.
 //
 
 import UIKit
@@ -12,25 +12,25 @@ import Moya
 import RxSwift
 
 
-let TestProvider = MoyaProvider<TestAPI>()
+let BTCProvider = MoyaProvider<BTCProviderAPI>()
 
-public enum TestAPI {
-    case getData(type: String)
+public enum BTCProviderAPI {
+    case getBTCData
 }
 
-extension TestAPI: TargetType {
+extension BTCProviderAPI: TargetType {
     public var headers: [String : String]? {
         return nil
     }
     
     public var baseURL: URL {
-        return URL(string: "http://app.chatm.com")!
+        return URL(string: API_PRO)!
     }
     
     public var path: String {
         switch self {
-        case .getData(_):
-            return "/chatm-app/getPic"
+        case .getBTCData:
+            return "/v1/bpi/currentprice/CNY"
         }
     }
     
@@ -40,8 +40,8 @@ extension TestAPI: TargetType {
     
     public var parameters: [String: Any]? {
         switch self {
-        case .getData(type: let type):
-            return ["type": type]
+        case .getBTCData:
+            return ["type": "JSON"]
         }
     }
     
