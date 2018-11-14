@@ -8,7 +8,7 @@ Swift 实现的网络框架示例，包括 MVC 和 MVVM 两种设计模式。�
 
 ![](https://img.shields.io/badge/platform-iOS-red.svg) ![](https://img.shields.io/badge/language-Swift-blue.svg) ![](https://img.shields.io/badge/download-12.9MB-yellow.svg) ![](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg) 
 
-![](http://og1yl0w9z.bkt.clouddn.com/18-1-8/36541412.jpg)
+![](https://user-gold-cdn.xitu.io/2018/3/8/16203aeea96ab2b3?w=382&h=220&f=png&s=13473)
 
 ### 🤖 要求
 
@@ -53,7 +53,7 @@ Alamofire.request(url, parameters: param).responseJSON { (response) in
 
 这些代码一般都是写在项目的Service或者ViewModel文件中，随着项目的增大每一个Service文件或者ViewModel文件中就会有很多不同的网络请求，每一次网络请求都不免会写这样的代码，那么项目中的网络请求就会变得很乱。
 
-![](http://og1yl0w9z.bkt.clouddn.com/18-1-8/16127650.jpg)
+![](https://user-gold-cdn.xitu.io/2018/3/8/16203aeeab27ec9c?w=343&h=512&f=png&s=31205)
 
 那么这时候一般我们会在项目中添加一个网络请求层，来管理网络请求，一般会叫 APIManager 或者 NetworkModel ，但是这样子还是会有一点不好：
 
@@ -69,7 +69,7 @@ Alamofire.request(url, parameters: param).responseJSON { (response) in
 
 Moya是作用在Alamofire之上，让我们不再直接去使用Alamofire了，Moya也就可以看做我们的网络管理层，只不过他拥有更好更清晰的网络管理。可以看到下图，我们的APP直接操作Moya，让Moya去管理请求，不在跟Alamofire进行接触。
 
-![](http://og1yl0w9z.bkt.clouddn.com/18-1-8/30713853.jpg)
+![](https://user-gold-cdn.xitu.io/2018/3/8/16203aeeab3de1f9?w=252&h=505&f=png&s=25510)
 
 网络请求
 
@@ -157,7 +157,7 @@ extension ItemAPI {
 
 ### ObjectMapper 数据转模型层
 
-![](http://og1yl0w9z.bkt.clouddn.com/18-1-8/20432958.jpg)
+![](https://user-gold-cdn.xitu.io/2018/3/8/16203aeea45eab40?w=382&h=220&f=png&s=10933)
 
 ObjectMapper 是一个在 Swift 下数据转模型的非常好用，并且很 Swift 的一个框架。以前我们在写 OC 代码的时候用 MJExtension 转模型，到了 Swift 的时代赶紧将 ObjectMapper 使用起来吧。
 
@@ -182,7 +182,7 @@ ObjectMapper框架支持的数据结构类型:
   
 ### Awesome Cache 缓存层
 
-![](http://og1yl0w9z.bkt.clouddn.com/18-1-8/7284550.jpg)
+![](https://user-gold-cdn.xitu.io/2018/3/8/16203aeeab44cd73?w=658&h=399&f=png&s=70455)
   
 Awesome Cache 是一个让人喜爱的本地磁盘缓存（使用 Swift 编写）。基于 NSCache 发挥最好的性能，而且支持单个对象的缓存期限。
 
