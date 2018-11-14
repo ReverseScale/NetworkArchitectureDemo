@@ -8,8 +8,7 @@ Examples of web frameworks implemented by Swift include both MVC and MVVM design
 
 [EN](https://github.com/ReverseScale/NetworkArchitectureDemo) | [中文](https://github.com/ReverseScale/NetworkArchitectureDemo/blob/master/README_zh.md)
 
-![](http://og1yl0w9z.bkt.clouddn.com/18-1-8/36541412.jpg)
-
+![](https://user-gold-cdn.xitu.io/2018/3/8/16203aeea96ab2b3?w=382&h=220&f=png&s=13473)
 
 ### 🤖 Requirements
 
@@ -54,7 +53,7 @@ Alamofire.request(url, parameters: param).responseJSON { (response) in
 
 These codes are generally written in the project's Service or ViewModel file, as the project increases each Service file or ViewModel file will have a lot of different network requests, each network request will inevitably write such a code, Then the network request in the project will become confusing.
 
-![](http://og1yl0w9z.bkt.clouddn.com/18-1-8/16127650.jpg)
+![](https://user-gold-cdn.xitu.io/2018/3/8/16203aeeab27ec9c?w=343&h=512&f=png&s=31205)
 
 Then this time we generally will add a network request layer in the project to manage network requests, usually called APIManager or NetworkModel, but this way there will be a little bad:
 
@@ -70,7 +69,7 @@ But Moya is a drop-in specialist specializing in these issues. Moya has the foll
 
 Moya is acting on Alamofire, let us no longer go directly to Alamofire, Moya can be seen as our network management, but he has better and clearer network management. As you can see in the picture below, our app operates directly on Moya, allowing Moya to manage requests without contacting Alamofire.
 
-![](http://og1yl0w9z.bkt.clouddn.com/18-1-8/30713853.jpg)
+![](https://user-gold-cdn.xitu.io/2018/3/8/16203aeeab3de1f9?w=252&h=505&f=png&s=25510)
 
 Network request
 
@@ -158,7 +157,7 @@ extension ItemAPI {
 
 ### ObjectMapper data transfer model layer
 
-![](http://og1yl0w9z.bkt.clouddn.com/18-1-8/20432958.jpg)
+![](https://user-gold-cdn.xitu.io/2018/3/8/16203aeea45eab40?w=382&h=220&f=png&s=10933)
 
 ObjectMapper is a very useful data transfer model in Swift, and is a framework for Swift. In the past, we used MJExtension to transfer the model when writing OC code, and in the Swift era we quickly used ObjectMapper.
 
@@ -182,7 +181,7 @@ ObjectMapper framework supports the data structure type:
   
 ### Awesome Cache Caching Layer
 
-![](http://og1yl0w9z.bkt.clouddn.com/18-1-8/7284550.jpg)
+![](https://user-gold-cdn.xitu.io/2018/3/8/16203aeeab44cd73?w=658&h=399&f=png&s=70455)
   
 
 Awesome Cache is a favorite local disk cache (written in Swift). Based on the NSCache to play the best performance, but also supports the cache duration of a single object.
