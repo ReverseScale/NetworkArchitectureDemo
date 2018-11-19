@@ -16,7 +16,7 @@ public extension TargetType {
         let urlStr = baseURL.appendingPathComponent(path).absoluteString
         var sortParams = ""
         
-        if let params = headers {
+        if let params = parameters {
             /// sort
             let sortArr = params.keys.sorted { (str1, str2) -> Bool in
                 return str1 < str2

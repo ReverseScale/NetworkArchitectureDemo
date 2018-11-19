@@ -38,7 +38,7 @@ extension BTCProviderAPI: TargetType {
         return .get
     }
     
-    public var parameters: [String: Any]? {
+    public var parameters: [String: String]? {
         switch self {
         case .getBTCData:
             return ["type": "JSON"]

@@ -43,10 +43,10 @@ extension TestListAPI: TargetType {
         }
     }
     
-    public var parameters: [String: Any]? {
+    public var parameters: [String: String]? {
         switch self {
         case .login(dic: let dic):
-            return dic as? [String : Any]
+            return dic as? [String : String]
         }
     }
     
