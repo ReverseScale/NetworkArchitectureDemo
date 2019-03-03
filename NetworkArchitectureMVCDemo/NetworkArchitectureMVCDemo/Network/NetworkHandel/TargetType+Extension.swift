@@ -24,9 +24,9 @@ public extension TargetType {
             
             for str1 in sortArr {
                 if let value = params[str1] {
-                    sortParams = sortParams.appending("\(str1)=\(value)")
+                    sortParams = sortParams.appending("&\(str1)=\(value)")
                 } else {
-                    sortParams = sortParams.appending("\(str1)=")
+                    sortParams = sortParams.appending("&\(str1)=")
                 }
             }
         }

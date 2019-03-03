@@ -6,11 +6,8 @@
 //  Copyright © 2018年 StevenXie. All rights reserved.
 //
 
-import UIKit
-
 import Moya
 import RxSwift
-
 
 let BTCProvider = MoyaProvider<BTCProviderAPI>()
 

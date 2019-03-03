@@ -6,8 +6,6 @@
 //  Copyright © 2017年 StevenXie. All rights reserved.
 //
 
-import UIKit
-
 import Moya
 import RxSwift
 

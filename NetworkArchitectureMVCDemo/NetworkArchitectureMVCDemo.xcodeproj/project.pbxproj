@@ -142,9 +142,8 @@
 			children = (
 				34C043A71F66327F00873AA5 /* AppDelegate.swift */,
 				34C043A91F66327F00873AA5 /* ViewController.swift */,
-				34C043E11F665B5800873AA5 /* API */,
-				34C043D61F66381400873AA5 /* NetworkHandel */,
 				34C043D51F66381000873AA5 /* Model */,
+				B0B9CFE8222BA8A5009EC4F7 /* Network */,
 				34C043AB1F66327F00873AA5 /* Main.storyboard */,
 				34C043AE1F66327F00873AA5 /* Assets.xcassets */,
 				34D61A40207E0A2900A3E906 /* Default.png */,
@@ -232,6 +231,15 @@
 				82A3513DDB0B4B89E86468BF /* Pods-NetworkArchitectureMVCDemoUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		B0B9CFE8222BA8A5009EC4F7 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				34C043D61F66381400873AA5 /* NetworkHandel */,
+				34C043E11F665B5800873AA5 /* API */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		FFFB779A2F31C4A26C246DB8 /* Frameworks */ = {

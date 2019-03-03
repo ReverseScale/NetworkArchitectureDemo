@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     var isCacheBool = UserDefaults.standard.bool(forKey: "isCache")
     
     let disposeBag = DisposeBag()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -65,7 +65,7 @@ class ViewController: UIViewController {
             })
             .disposed(by: disposeBag)
     }
-
+    
     
     @IBAction func switchClick(_ sender: UISwitch) {
         let isCache = sender.isOn
@@ -84,7 +84,7 @@ class ViewController: UIViewController {
     func loadImage(url:String, cache:Bool) {
         webImageView.kf.setImage(with: URL(string: url),placeholder:UIImage(named:"icon_placeholder"))
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
