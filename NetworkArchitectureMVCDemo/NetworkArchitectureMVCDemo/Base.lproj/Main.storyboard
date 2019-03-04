@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Display network data" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7Yw-07-7He">
-                                <rect key="frame" x="56" y="184" width="263" height="128"/>
+                                <rect key="frame" x="56" y="134" width="263" height="128"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="T7B-3m-kVC"/>
@@ -31,7 +31,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Show the cached data" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DtL-Yz-6MS">
-                                <rect key="frame" x="56" y="342" width="263" height="128"/>
+                                <rect key="frame" x="56" y="292" width="263" height="128"/>
                                 <color key="backgroundColor" red="0.048271501449394648" green="0.66567067593876217" blue="0.70394983055627891" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="QkF-g7-5wn"/>
@@ -40,50 +40,141 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="缓存开关" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5N-yN-QHp">
-                                <rect key="frame" x="56" y="472" width="62" height="18"/>
+                                <rect key="frame" x="56" y="422" width="62" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="网络数据" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHk-GR-fio">
-                                <rect key="frame" x="56" y="164" width="61.5" height="18"/>
+                                <rect key="frame" x="56" y="114" width="61.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="缓存数据" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tGn-Hs-E91">
-                                <rect key="frame" x="56" y="322" width="61.5" height="18"/>
+                                <rect key="frame" x="56" y="272" width="61.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ar1-fu-xmr">
-                                <rect key="frame" x="56" y="495" width="51" height="31"/>
+                                <rect key="frame" x="56" y="445" width="51" height="31"/>
                                 <connections>
                                     <action selector="switchClick:" destination="BYZ-38-t0r" eventType="valueChanged" id="V0e-ED-ZCL"/>
                                 </connections>
                             </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sd7-Nu-A5F">
+                                <rect key="frame" x="56" y="496" width="74" height="28"/>
+                                <color key="backgroundColor" red="0.45978266000000001" green="0.46801960469999998" blue="0.47958493229999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title=" 单文件上传 ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="uploadAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W3W-XX-5BJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UnQ-oD-DNQ">
+                                <rect key="frame" x="145" y="496" width="150" height="28"/>
+                                <color key="backgroundColor" red="0.45978266000000001" green="0.46801960469999998" blue="0.47958493229999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title=" 单文件上传（额外参数）">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="uploadFileNameAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TY1-14-MZS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="62M-7m-fJZ">
+                                <rect key="frame" x="56" y="544" width="74" height="28"/>
+                                <color key="backgroundColor" red="0.45978266000000001" green="0.46801960469999998" blue="0.47958493229999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title=" 多文件上传 ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="uploadMultipleAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q4M-Gd-nAa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nj9-X1-Rc6">
+                                <rect key="frame" x="145" y="544" width="150" height="28"/>
+                                <color key="backgroundColor" red="0.45978266000000001" green="0.46801960469999998" blue="0.47958493229999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title=" 多文件上传（额外参数）">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="uploadMultipleFileNameAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GWc-Kk-tPo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GnG-WK-wO9">
+                                <rect key="frame" x="105" y="592" width="84" height="28"/>
+                                <color key="backgroundColor" red="0.45978266000000001" green="0.46801960469999998" blue="0.47958493229999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title=" 下载（命名）">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="downloadSaveNameAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jno-cH-rdd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8uw-J9-Vcw">
+                                <rect key="frame" x="204" y="592" width="84" height="28"/>
+                                <color key="backgroundColor" red="0.45978266000000001" green="0.46801960469999998" blue="0.47958493229999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title=" 下载（封装）">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="downloadAssetLoaderAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q8V-mt-S3i"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4P-Fr-NCZ">
+                                <rect key="frame" x="56" y="592" width="34" height="28"/>
+                                <color key="backgroundColor" red="0.45978266000000001" green="0.46801960469999998" blue="0.47958493229999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title=" 下载 ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="downloadAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wmr-yh-9jT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Ar1-fu-xmr" firstAttribute="top" secondItem="X5N-yN-QHp" secondAttribute="bottom" constant="5" id="3nR-Zy-6IO"/>
                             <constraint firstItem="X5N-yN-QHp" firstAttribute="leading" secondItem="DtL-Yz-6MS" secondAttribute="leading" id="3wX-Qy-e2Q"/>
+                            <constraint firstItem="62M-7m-fJZ" firstAttribute="top" secondItem="sd7-Nu-A5F" secondAttribute="bottom" constant="20" id="8Og-UM-hC6"/>
                             <constraint firstItem="7Yw-07-7He" firstAttribute="top" secondItem="pHk-GR-fio" secondAttribute="bottom" constant="2" id="A4e-g5-98l"/>
+                            <constraint firstItem="UnQ-oD-DNQ" firstAttribute="leading" secondItem="sd7-Nu-A5F" secondAttribute="trailing" constant="15" id="CH4-JE-hoL"/>
+                            <constraint firstItem="GnG-WK-wO9" firstAttribute="leading" secondItem="O4P-Fr-NCZ" secondAttribute="trailing" constant="15" id="DHS-dz-N0q"/>
                             <constraint firstItem="7Yw-07-7He" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="Deo-Rl-C37"/>
-                            <constraint firstItem="pHk-GR-fio" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="J5f-SZ-9zX"/>
+                            <constraint firstItem="GnG-WK-wO9" firstAttribute="centerY" secondItem="O4P-Fr-NCZ" secondAttribute="centerY" id="FhN-In-ZP9"/>
+                            <constraint firstItem="O4P-Fr-NCZ" firstAttribute="top" secondItem="62M-7m-fJZ" secondAttribute="bottom" constant="20" id="HE3-Fm-r8Y"/>
+                            <constraint firstItem="pHk-GR-fio" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="J5f-SZ-9zX"/>
+                            <constraint firstItem="sd7-Nu-A5F" firstAttribute="leading" secondItem="Ar1-fu-xmr" secondAttribute="leading" id="Oac-OS-pBP"/>
+                            <constraint firstItem="8uw-J9-Vcw" firstAttribute="centerY" secondItem="O4P-Fr-NCZ" secondAttribute="centerY" id="OcB-XB-aaz"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="pHk-GR-fio" secondAttribute="trailing" constant="20" symbolic="YES" id="R0g-Zz-aJC"/>
+                            <constraint firstItem="UnQ-oD-DNQ" firstAttribute="centerY" secondItem="sd7-Nu-A5F" secondAttribute="centerY" id="S1K-ER-zlY"/>
+                            <constraint firstItem="nj9-X1-Rc6" firstAttribute="centerY" secondItem="62M-7m-fJZ" secondAttribute="centerY" id="Sf6-3o-2y9"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tGn-Hs-E91" secondAttribute="trailing" constant="20" symbolic="YES" id="Sqa-p1-YYl"/>
                             <constraint firstItem="7Yw-07-7He" firstAttribute="leading" secondItem="pHk-GR-fio" secondAttribute="leading" id="TaX-O8-ayw"/>
                             <constraint firstItem="DtL-Yz-6MS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="TlE-Px-xVr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7Yw-07-7He" secondAttribute="trailing" constant="40" id="VI0-Sq-bsa"/>
+                            <constraint firstItem="62M-7m-fJZ" firstAttribute="leading" secondItem="Ar1-fu-xmr" secondAttribute="leading" id="WSH-i1-7h2"/>
                             <constraint firstItem="DtL-Yz-6MS" firstAttribute="top" secondItem="7Yw-07-7He" secondAttribute="bottom" constant="30" id="Zg8-iX-3zc"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="X5N-yN-QHp" secondAttribute="trailing" constant="20" symbolic="YES" id="ZgH-Le-ker"/>
                             <constraint firstItem="DtL-Yz-6MS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="afw-TO-sZ5"/>
                             <constraint firstItem="X5N-yN-QHp" firstAttribute="top" secondItem="DtL-Yz-6MS" secondAttribute="bottom" constant="2" id="cxm-oL-MwM"/>
+                            <constraint firstItem="O4P-Fr-NCZ" firstAttribute="leading" secondItem="Ar1-fu-xmr" secondAttribute="leading" id="gPd-8y-1S5"/>
+                            <constraint firstItem="sd7-Nu-A5F" firstAttribute="top" secondItem="Ar1-fu-xmr" secondAttribute="bottom" constant="20" id="hYd-WW-4kk"/>
+                            <constraint firstItem="8uw-J9-Vcw" firstAttribute="leading" secondItem="GnG-WK-wO9" secondAttribute="trailing" constant="15" id="j9x-Jj-dTz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="DtL-Yz-6MS" secondAttribute="trailing" constant="40" id="jIi-Rh-aHb"/>
                             <constraint firstItem="7Yw-07-7He" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jKe-pY-mmJ"/>
                             <constraint firstItem="DtL-Yz-6MS" firstAttribute="leading" secondItem="tGn-Hs-E91" secondAttribute="leading" id="qDk-nh-V4m"/>
                             <constraint firstItem="Ar1-fu-xmr" firstAttribute="leading" secondItem="X5N-yN-QHp" secondAttribute="leading" id="w69-8d-K2j"/>
+                            <constraint firstItem="nj9-X1-Rc6" firstAttribute="leading" secondItem="62M-7m-fJZ" secondAttribute="trailing" constant="15" id="y0R-pq-NlW"/>
                             <constraint firstItem="DtL-Yz-6MS" firstAttribute="top" secondItem="tGn-Hs-E91" secondAttribute="bottom" constant="2" id="zBS-sl-99G"/>
                         </constraints>
                     </view>

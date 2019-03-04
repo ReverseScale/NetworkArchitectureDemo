@@ -25,6 +25,11 @@
 		34C043E91F66653200873AA5 /* TestLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C043E81F66653200873AA5 /* TestLoginModel.swift */; };
 		34D61A41207E0A2900A3E906 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34D61A3F207E0A2800A3E906 /* LaunchScreen.storyboard */; };
 		34D61A42207E0A2900A3E906 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 34D61A40207E0A2900A3E906 /* Default.png */; };
+		52B23185222CFFF100A28F3E /* UDLoadProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B23184222CFFF100A28F3E /* UDLoadProvider.swift */; };
+		52B23187222D003900A28F3E /* AssetLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B23186222D003800A28F3E /* AssetLoader.swift */; };
+		52B2318C222D02B700A28F3E /* test.zip in Resources */ = {isa = PBXBuildFile; fileRef = 52B23189222D02B700A28F3E /* test.zip */; };
+		52B2318D222D02B700A28F3E /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B2318A222D02B700A28F3E /* test.png */; };
+		52B2318E222D02B700A28F3E /* other.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B2318B222D02B700A28F3E /* other.png */; };
 		52D9C62F210B23A600D3F3FD /* BTCBpi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9C62B210B23A500D3F3FD /* BTCBpi.swift */; };
 		52D9C630210B23A600D3F3FD /* BTCRootModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9C62C210B23A500D3F3FD /* BTCRootModel.swift */; };
 		52D9C631210B23A600D3F3FD /* BTCCNY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9C62D210B23A500D3F3FD /* BTCCNY.swift */; };
@@ -73,6 +78,11 @@
 		34C043E81F66653200873AA5 /* TestLoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestLoginModel.swift; sourceTree = "<group>"; };
 		34D61A3F207E0A2800A3E906 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		34D61A40207E0A2900A3E906 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		52B23184222CFFF100A28F3E /* UDLoadProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UDLoadProvider.swift; sourceTree = "<group>"; };
+		52B23186222D003800A28F3E /* AssetLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetLoader.swift; sourceTree = "<group>"; };
+		52B23189222D02B700A28F3E /* test.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = test.zip; sourceTree = "<group>"; };
+		52B2318A222D02B700A28F3E /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
+		52B2318B222D02B700A28F3E /* other.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = other.png; sourceTree = "<group>"; };
 		52D9C62B210B23A500D3F3FD /* BTCBpi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTCBpi.swift; sourceTree = "<group>"; };
 		52D9C62C210B23A500D3F3FD /* BTCRootModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTCRootModel.swift; sourceTree = "<group>"; };
 		52D9C62D210B23A500D3F3FD /* BTCCNY.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTCCNY.swift; sourceTree = "<group>"; };
@@ -144,6 +154,7 @@
 				34C043A91F66327F00873AA5 /* ViewController.swift */,
 				34C043D51F66381000873AA5 /* Model */,
 				B0B9CFE8222BA8A5009EC4F7 /* Network */,
+				52B23188222D02B700A28F3E /* Resources */,
 				34C043AB1F66327F00873AA5 /* Main.storyboard */,
 				34C043AE1F66327F00873AA5 /* Assets.xcassets */,
 				34D61A40207E0A2900A3E906 /* Default.png */,
@@ -199,6 +210,25 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		52B23183222CFFB400A28F3E /* NetworkUDLoad */ = {
+			isa = PBXGroup;
+			children = (
+				52B23184222CFFF100A28F3E /* UDLoadProvider.swift */,
+				52B23186222D003800A28F3E /* AssetLoader.swift */,
+			);
+			path = NetworkUDLoad;
+			sourceTree = "<group>";
+		};
+		52B23188222D02B700A28F3E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				52B23189222D02B700A28F3E /* test.zip */,
+				52B2318A222D02B700A28F3E /* test.png */,
+				52B2318B222D02B700A28F3E /* other.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		52D9C62A210B238B00D3F3FD /* BTCModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,8 +266,9 @@
 		B0B9CFE8222BA8A5009EC4F7 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				34C043D61F66381400873AA5 /* NetworkHandel */,
 				34C043E11F665B5800873AA5 /* API */,
+				34C043D61F66381400873AA5 /* NetworkHandel */,
+				52B23183222CFFB400A28F3E /* NetworkUDLoad */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -368,6 +399,9 @@
 				34C043AF1F66327F00873AA5 /* Assets.xcassets in Resources */,
 				34C043AD1F66327F00873AA5 /* Main.storyboard in Resources */,
 				34D61A42207E0A2900A3E906 /* Default.png in Resources */,
+				52B2318C222D02B700A28F3E /* test.zip in Resources */,
+				52B2318D222D02B700A28F3E /* test.png in Resources */,
+				52B2318E222D02B700A28F3E /* other.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,9 +520,11 @@
 				34C043E01F663ADC00873AA5 /* TargetType+Extension.swift in Sources */,
 				34C043E91F66653200873AA5 /* TestLoginModel.swift in Sources */,
 				52D9C631210B23A600D3F3FD /* BTCCNY.swift in Sources */,
+				52B23187222D003900A28F3E /* AssetLoader.swift in Sources */,
 				34C043DC1F663A0E00873AA5 /* Observable+Extension.swift in Sources */,
 				52D9C634210B23E400D3F3FD /* BTCProvider.swift in Sources */,
 				34C043E71F665B8B00873AA5 /* TestPostProvider.swift in Sources */,
+				52B23185222CFFF100A28F3E /* UDLoadProvider.swift in Sources */,
 				34C043AA1F66327F00873AA5 /* ViewController.swift in Sources */,
 				34C043A81F66327F00873AA5 /* AppDelegate.swift in Sources */,
 				52D9C62F210B23A600D3F3FD /* BTCBpi.swift in Sources */,
