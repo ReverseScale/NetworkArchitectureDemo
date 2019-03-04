@@ -9,11 +9,9 @@
 import UIKit
 
 import RxSwift
-import Kingfisher
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var webImageView: UIImageView!
     @IBOutlet weak var cacheSwitch: UISwitch!
     @IBOutlet weak var dataTextView: UITextView!
     @IBOutlet weak var cacheTextView: UITextView!
@@ -31,7 +29,6 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         cacheSwitch.isOn = isCacheBool
-        loadImage(url: "",cache:isCacheBool)
     }
     
     /// 请求比特币价格
@@ -56,9 +53,9 @@ class ViewController: UIViewController {
     
     /// POST示例：登录验证(接口失联)
     func postLogin() {
-        let dic = ["username":"WhatsXie", "pwd":"123456"]
+        let params = ["username":"WhatsXie", "pwd":"123456"]
         TestPostProvider
-            .requestJson(.login(dic: dic as NSDictionary), isCache: false)
+            .requestJson(.login(params: params), isCache: false)
             .mapObject(type: TestLoginModel.self)
             .subscribe(onNext: { (callback) in
                 print("Error:\(callback.error ?? "")")
@@ -79,10 +76,6 @@ class ViewController: UIViewController {
     func loadData(dataText:String, cache:Bool) {
         dataTextView.text = dataText
         cacheTextView.text = cache ? dataText : ""
-    }
-    /// 加载图片数据
-    func loadImage(url:String, cache:Bool) {
-        webImageView.kf.setImage(with: URL(string: url),placeholder:UIImage(named:"icon_placeholder"))
     }
     
     override func didReceiveMemoryWarning() {

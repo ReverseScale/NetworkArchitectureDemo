@@ -12,26 +12,24 @@ import Moya
 
 /// key
 public extension TargetType {
+    
     var cacheKey: String {
-        let urlStr = baseURL.appendingPathComponent(path).absoluteString
-        var sortParams = ""
-        
-        if let params = parameters {
-            /// sort
-            let sortArr = params.keys.sorted { (str1, str2) -> Bool in
-                return str1 < str2
-            }
-            
-            for str1 in sortArr {
-                if let value = params[str1] {
-                    sortParams = sortParams.appending("&\(str1)=\(value)")
-                } else {
-                    sortParams = sortParams.appending("&\(str1)=")
-                }
-            }
+        if let urlRequest = try? endpoint.urlRequest(),
+            let data = urlRequest.httpBody,
+            let parameters = String(data: data, encoding: .utf8) {
+            print("\(method.rawValue):\(endpoint.url)?\(parameters)")
+            return "\(method.rawValue):\(endpoint.url)?\(parameters)"
         }
-        let urlRequestString = urlStr.appending("?\(sortParams)")
-        print("Network request full URL:\(urlRequestString)")
-        return urlRequestString
+        print("\(method.rawValue):\(endpoint.url)")
+        return "\(method.rawValue):\(endpoint.url)"
+    }
+    
+    private var endpoint: Endpoint {
+        return Endpoint(url: URL(target: self).absoluteString,
+                        sampleResponseClosure: {
+                            .networkResponse(200, self.sampleData) },
+                        method: method,
+                        task: task,
+                        httpHeaderFields: headers)
     }
 }

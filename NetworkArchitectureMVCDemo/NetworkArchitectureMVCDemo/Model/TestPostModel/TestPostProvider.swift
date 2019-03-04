@@ -13,15 +13,13 @@ import RxSwift
 let TestPostProvider = MoyaProvider<TestListAPI>()
 
 public enum TestListAPI {
-    case login(dic: NSDictionary)
+    case login(params: [String:Any])
 }
-
 
 extension TestListAPI: TargetType {
     public var headers: [String : String]? {
         return nil
     }
-    
     
     public var baseURL: URL {
         return URL(string: API_PRO)!
@@ -29,22 +27,15 @@ extension TestListAPI: TargetType {
     
     public var path: String {
         switch self {
-        case .login(dic: _):
+        case .login:
             return "/login"
         }
     }
     
     public var method: Moya.Method {
         switch self {
-        case .login(dic: _):
+        case .login:
             return .post
-        }
-    }
-    
-    public var parameters: [String: String]? {
-        switch self {
-        case .login(dic: let dic):
-            return dic as? [String : String]
         }
     }
     
@@ -57,6 +48,11 @@ extension TestListAPI: TargetType {
     }
     
     public var task: Task {
-        return .requestPlain
+        //        return .requestPlain
+        switch self {
+        case .login(let params):
+            return .requestParameters(parameters: params,
+                                      encoding: URLEncoding.default)
+        }
     }
 }

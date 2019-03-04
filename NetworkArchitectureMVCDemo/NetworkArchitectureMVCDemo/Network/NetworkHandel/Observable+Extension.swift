@@ -39,7 +39,7 @@ extension MoyaProvider {
         return Observable.create { observer in
             let key = token.cacheKey
             // get caches
-            if  isCache == true,
+            if isCache == true,
                 let res = cache[key]{
                 if res.statusCode >= 200 && res.statusCode <= 299 {
                     let response = Response.init(statusCode: res.statusCode, data: res.data, request: res.request, response: res.response as? HTTPURLResponse)
@@ -74,7 +74,7 @@ extension Observable {
         return self.map { response in
             /// response log
             if openRequestLog {
-//                print(response)
+                //                print(response)
             }
             guard let json = response as? [String: Any] else {
                 throw RxSwiftMoyaError.ParseJSONError
@@ -82,7 +82,7 @@ extension Observable {
             guard let model = Mapper<T>().map(JSON: json) else {
                 throw RxSwiftMoyaError.CouldNotMakeObjectError
             }
-
+            
             return model
         }
     }
@@ -95,7 +95,7 @@ extension Observable {
             }
             /// response log
             if openRequestLog {
-//                print(response)
+                //                print(response)
             }
             guard let data = json[domain] as? [[String: Any]] else {
                 throw RxSwiftMoyaError.ParseJSONError
@@ -114,7 +114,7 @@ extension Observable {
             }
             /// response log
             if openRequestLog {
-//                print(response)
+                //                print(response)
             }
             guard let data = json[domain] as? [String: [[String: Any]]] else {
                 throw RxSwiftMoyaError.OtherError

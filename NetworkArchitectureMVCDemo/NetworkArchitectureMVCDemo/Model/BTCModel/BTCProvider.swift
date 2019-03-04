@@ -35,16 +35,18 @@ extension BTCProviderAPI: TargetType {
         return .get
     }
     
-    public var parameters: [String: String]? {
-        switch self {
-        case .getBTCData:
-            return ["type": "JSON"]
-        }
-    }
-    
     public var parameterEncoding: ParameterEncoding { return URLEncoding.default }
     
-    public var task: Task { return .requestPlain }
+    public var task: Task {
+        switch self {
+        case .getBTCData:
+            var params: [String: Any] = [:]
+            params["param1"] = "param1"
+            params["param2"] = "param2"
+            return .requestParameters(parameters: params,
+                                      encoding: URLEncoding.default)
+        }
+    }
     
     public var validate: Bool { return false }
     
