@@ -23,7 +23,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        requestPriceBTC(cache: isCacheBool)
+        getPriceBTC(cache: isCacheBool)
+        
+        getAIChatMessage(cache: isCacheBool)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,14 +34,40 @@ class ViewController: UIViewController {
     }
     
     /// 请求比特币价格
-    func requestPriceBTC(cache: Bool) {
+    func getPriceBTC(cache: Bool) {
         BTCProvider
             .requestJson(.getBTCData,isCache: cache)
             .mapObject(type: BTCRootModel.self)
-            .subscribe(onNext:{[weak self](model) in
-                print("Image Model:\(model)")
+            .subscribe(onNext:{(model) in
                 
-                self?.loadData(dataText: ((model.time?.updated)! + "\n" + (model.bpi?.uSD?.rate)!), cache:cache)
+                print("Model Time:\(model.time?.updated ?? "")")
+                print("Model Price:\(model.bpi?.uSD?.rate ?? "")")
+                
+            }, onError: { (error) in
+                print("Network Request - Error Callback (Process Result):\(error.localizedDescription)")
+            }, onCompleted: {
+                print("Network Request - Signed Callback (Optional)")
+            }){
+                print("Network Request - Processing Callback (Optional)")
+            }
+            .disposed(by: disposeBag)
+    }
+    
+    /// 请求聊天机器人
+    func getAIChatMessage(cache: Bool) {
+        var params: [String: Any] = [:]
+        params["channel"] = "app"
+        params["userId"] = "0"
+        params["sessionId"] = "0"
+        params["question"] = "hello"
+        
+        AIProvider.requestJson(.getChatMessage(params: params),isCache: cache)
+            .mapObject(type: AIChatModel.self)
+            .subscribe(onNext:{[weak self](model) in
+                
+                print("Model:\(model)")
+                
+                self?.loadData(dataText: model.answers?.first?.answer ?? "", cache:cache)
                 
                 }, onError: { (error) in
                     print("Network Request - Error Callback (Process Result):\(error.localizedDescription)")
@@ -67,7 +95,7 @@ class ViewController: UIViewController {
     @IBAction func switchClick(_ sender: UISwitch) {
         let isCache = sender.isOn
         if isCache {
-            requestPriceBTC(cache: isCache)
+            getPriceBTC(cache: isCache)
         }
         UserDefaults.standard.set(isCache, forKey: "isCache")
     }

@@ -1,33 +1,33 @@
 //
-//  BTCProvider.swift
+//  AIProvider.swift
 //  NetworkArchitectureMVCDemo
 //
-//  Created by Steven Xie on 2018/7/27.
-//  Copyright © 2018年 StevenXie. All rights reserved.
+//  Created by Steven Xie on 2019/3/4.
+//  Copyright © 2019 StevenXie. All rights reserved.
 //
 
 import Moya
 import RxSwift
 
-let BTCProvider = MoyaProvider<BTCProviderAPI>()
+let AIProvider = MoyaProvider<AIProviderAPI>()
 
-public enum BTCProviderAPI {
-    case getBTCData
+public enum AIProviderAPI {
+    case getChatMessage(params: [String:Any])
 }
 
-extension BTCProviderAPI: TargetType {
+extension AIProviderAPI: TargetType {
     public var headers: [String : String]? {
         return nil
     }
     
     public var baseURL: URL {
-        return URL(string: API_COIN)!
+        return URL(string: API_AI)!
     }
     
     public var path: String {
         switch self {
-        case .getBTCData:
-            return "/v1/bpi/currentprice/CNY"
+        case .getChatMessage:
+            return "/answer"
         }
     }
     
@@ -39,10 +39,7 @@ extension BTCProviderAPI: TargetType {
     
     public var task: Task {
         switch self {
-        case .getBTCData:
-            var params: [String: Any] = [:]
-            params["param1"] = "param1"
-            params["param2"] = "param2"
+        case .getChatMessage(let params):
             return .requestParameters(parameters: params,
                                       encoding: URLEncoding.default)
         }

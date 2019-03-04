@@ -22,7 +22,7 @@ extension TestListAPI: TargetType {
     }
     
     public var baseURL: URL {
-        return URL(string: API_PRO)!
+        return URL(string: API_COIN)!
     }
     
     public var path: String {

@@ -31,6 +31,9 @@
 		52B2318D222D02B700A28F3E /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B2318A222D02B700A28F3E /* test.png */; };
 		52B2318E222D02B700A28F3E /* other.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B2318B222D02B700A28F3E /* other.png */; };
 		52B23190222D051E00A28F3E /* Observable+CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B2318F222D051E00A28F3E /* Observable+CacheManager.swift */; };
+		52B23194222D095100A28F3E /* AIAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B23192222D095100A28F3E /* AIAnswer.swift */; };
+		52B23195222D095100A28F3E /* AIChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B23193222D095100A28F3E /* AIChatModel.swift */; };
+		52B23197222D097100A28F3E /* AIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B23196222D097100A28F3E /* AIProvider.swift */; };
 		52D9C62F210B23A600D3F3FD /* BTCBpi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9C62B210B23A500D3F3FD /* BTCBpi.swift */; };
 		52D9C630210B23A600D3F3FD /* BTCRootModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9C62C210B23A500D3F3FD /* BTCRootModel.swift */; };
 		52D9C631210B23A600D3F3FD /* BTCCNY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9C62D210B23A500D3F3FD /* BTCCNY.swift */; };
@@ -85,6 +88,9 @@
 		52B2318A222D02B700A28F3E /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
 		52B2318B222D02B700A28F3E /* other.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = other.png; sourceTree = "<group>"; };
 		52B2318F222D051E00A28F3E /* Observable+CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+CacheManager.swift"; sourceTree = "<group>"; };
+		52B23192222D095100A28F3E /* AIAnswer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AIAnswer.swift; sourceTree = "<group>"; };
+		52B23193222D095100A28F3E /* AIChatModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AIChatModel.swift; sourceTree = "<group>"; };
+		52B23196222D097100A28F3E /* AIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIProvider.swift; sourceTree = "<group>"; };
 		52D9C62B210B23A500D3F3FD /* BTCBpi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTCBpi.swift; sourceTree = "<group>"; };
 		52D9C62C210B23A500D3F3FD /* BTCRootModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTCRootModel.swift; sourceTree = "<group>"; };
 		52D9C62D210B23A500D3F3FD /* BTCCNY.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTCCNY.swift; sourceTree = "<group>"; };
@@ -187,6 +193,7 @@
 		34C043D51F66381000873AA5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				52B23191222D093800A28F3E /* AIChatModel */,
 				52D9C62A210B238B00D3F3FD /* BTCModel */,
 				52D9C635210B285000D3F3FD /* TestPostModel */,
 			);
@@ -230,6 +237,16 @@
 				52B2318B222D02B700A28F3E /* other.png */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		52B23191222D093800A28F3E /* AIChatModel */ = {
+			isa = PBXGroup;
+			children = (
+				52B23196222D097100A28F3E /* AIProvider.swift */,
+				52B23192222D095100A28F3E /* AIAnswer.swift */,
+				52B23193222D095100A28F3E /* AIChatModel.swift */,
+			);
+			path = AIChatModel;
 			sourceTree = "<group>";
 		};
 		52D9C62A210B238B00D3F3FD /* BTCModel */ = {
@@ -520,11 +537,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52B23197222D097100A28F3E /* AIProvider.swift in Sources */,
 				34C043E01F663ADC00873AA5 /* TargetType+Extension.swift in Sources */,
 				34C043E91F66653200873AA5 /* TestLoginModel.swift in Sources */,
 				52D9C631210B23A600D3F3FD /* BTCCNY.swift in Sources */,
 				52B23187222D003900A28F3E /* AssetLoader.swift in Sources */,
 				34C043DC1F663A0E00873AA5 /* Observable+Extension.swift in Sources */,
+				52B23194222D095100A28F3E /* AIAnswer.swift in Sources */,
 				52D9C634210B23E400D3F3FD /* BTCProvider.swift in Sources */,
 				34C043E71F665B8B00873AA5 /* TestPostProvider.swift in Sources */,
 				52B23185222CFFF100A28F3E /* UDLoadProvider.swift in Sources */,
@@ -534,6 +553,7 @@
 				52D9C630210B23A600D3F3FD /* BTCRootModel.swift in Sources */,
 				34C043E31F665B5800873AA5 /* API.swift in Sources */,
 				52D9C632210B23A600D3F3FD /* BTCTime.swift in Sources */,
+				52B23195222D095100A28F3E /* AIChatModel.swift in Sources */,
 				3448996A2058BE7F00E7622B /* Observable+Callback.swift in Sources */,
 				52B23190222D051E00A28F3E /* Observable+CacheManager.swift in Sources */,
 				34C043DE1F663A7200873AA5 /* Response+NSCoding.swift in Sources */,

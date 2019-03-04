@@ -9,7 +9,9 @@
 import Foundation
 import Moya
 
-let API_PRO = "http://api.coindesk.com"
+let API_COIN = "http://api.coindesk.com"
+let API_AI = "https://api.chatbot.cn/cloud/robot/5c76220f23000068f55d6ab5"
+
 
 let headerFields: [String: String] = ["system": "iOS","sys_ver": String(UIDevice.version())]
 let publicParameters: [String: String] = ["language": "_zh_CN"]
