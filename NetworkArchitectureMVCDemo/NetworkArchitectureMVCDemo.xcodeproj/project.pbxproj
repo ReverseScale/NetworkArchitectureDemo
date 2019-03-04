@@ -30,6 +30,7 @@
 		52B2318C222D02B700A28F3E /* test.zip in Resources */ = {isa = PBXBuildFile; fileRef = 52B23189222D02B700A28F3E /* test.zip */; };
 		52B2318D222D02B700A28F3E /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B2318A222D02B700A28F3E /* test.png */; };
 		52B2318E222D02B700A28F3E /* other.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B2318B222D02B700A28F3E /* other.png */; };
+		52B23190222D051E00A28F3E /* Observable+CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B2318F222D051E00A28F3E /* Observable+CacheManager.swift */; };
 		52D9C62F210B23A600D3F3FD /* BTCBpi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9C62B210B23A500D3F3FD /* BTCBpi.swift */; };
 		52D9C630210B23A600D3F3FD /* BTCRootModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9C62C210B23A500D3F3FD /* BTCRootModel.swift */; };
 		52D9C631210B23A600D3F3FD /* BTCCNY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9C62D210B23A500D3F3FD /* BTCCNY.swift */; };
@@ -83,6 +84,7 @@
 		52B23189222D02B700A28F3E /* test.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = test.zip; sourceTree = "<group>"; };
 		52B2318A222D02B700A28F3E /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
 		52B2318B222D02B700A28F3E /* other.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = other.png; sourceTree = "<group>"; };
+		52B2318F222D051E00A28F3E /* Observable+CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+CacheManager.swift"; sourceTree = "<group>"; };
 		52D9C62B210B23A500D3F3FD /* BTCBpi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTCBpi.swift; sourceTree = "<group>"; };
 		52D9C62C210B23A500D3F3FD /* BTCRootModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTCRootModel.swift; sourceTree = "<group>"; };
 		52D9C62D210B23A500D3F3FD /* BTCCNY.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTCCNY.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				34C043DB1F663A0E00873AA5 /* Observable+Extension.swift */,
+				52B2318F222D051E00A28F3E /* Observable+CacheManager.swift */,
 				344899692058BE7E00E7622B /* Observable+Callback.swift */,
 				34C043DD1F663A7200873AA5 /* Response+NSCoding.swift */,
 				34C043DF1F663ADC00873AA5 /* TargetType+Extension.swift */,
@@ -532,6 +535,7 @@
 				34C043E31F665B5800873AA5 /* API.swift in Sources */,
 				52D9C632210B23A600D3F3FD /* BTCTime.swift in Sources */,
 				3448996A2058BE7F00E7622B /* Observable+Callback.swift in Sources */,
+				52B23190222D051E00A28F3E /* Observable+CacheManager.swift in Sources */,
 				34C043DE1F663A7200873AA5 /* Response+NSCoding.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
