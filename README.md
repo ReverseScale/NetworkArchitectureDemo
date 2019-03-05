@@ -14,8 +14,7 @@ Examples of web frameworks implemented by Swift include both MVC and MVVM design
 
 * iOS 8.0+
 * Xcode 9.0+
-* Swift 4.0
-（MVVM uses Swift 3.2）
+* Swift 4.2
 
 ### 🎯 Installation
 
