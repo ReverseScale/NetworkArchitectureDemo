@@ -14,8 +14,7 @@ Swift 实现的网络框架示例，包括 MVC 和 MVVM 两种设计模式。�
 
 * iOS 8.0+
 * Xcode 9.0+
-* Swift 4.0
-（MVVM 使用 Swift 3.2）
+* Swift 4.2
 
 ### 🎯 安装方法
 
