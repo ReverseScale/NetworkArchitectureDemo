@@ -1,6 +1,0 @@
-framework module Pods_NetworkArchitectureDemoTests {
-  umbrella header "Pods-NetworkArchitectureDemoTests-umbrella.h"
-
-  export *
-  module * { export * }
-}
