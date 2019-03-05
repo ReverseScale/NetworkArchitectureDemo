@@ -1,6 +1,6 @@
 # NetworkArchitectureDemo
 
-Examples of web frameworks implemented by Swift include both MVC and MVVM design patterns. 🤖
+Examples of web frameworks implemented by Swift include both MVC design patterns. 🤖
 
 > Use Moya + RxSwift + ObjectMapper + AwesomeCache for elegant web requests, parsing and caching.
 
